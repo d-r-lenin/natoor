@@ -9,6 +9,11 @@
     align-items: center;
     justify-content: center;
     background-color: rgba($color: $color-grey-dark-3, $alpha: .8);
+    transition: all .3s;
+
+    //hide
+    opacity: 0;
+    visibility: hidden;
 
     &__content{
 
@@ -16,6 +21,10 @@
         z-index: 21;
         background-color: $color-light-1;
         display: table;
+        position: relative;
+        transition: all .3s .2s;
+
+        transform: scale(.3);
 
     }
 
@@ -33,7 +42,7 @@
         width: 66.666666%;
         display: table-cell;
         vertical-align: middle;
-        padding: 1rem 2rem;
+        padding: 1rem 3rem;
     }
 
     &__text{
@@ -43,4 +52,37 @@
 
         hyphens: auto;
     }
+
+    &__close{
+
+        &:link,
+        &:visited{
+            line-height: 1;
+            position: absolute;
+            top: 2rem;
+            right: 2rem ;
+            font-size: 3rem;
+            text-decoration: none;
+            color: $color-grey-dark-2;
+        }
+
+        &:hover,
+        &:active{
+            color: $color-primary-dark;
+        }
+    }
+
+    // opening POPUP
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content{
+        transform: scale(1);
+    }
+
+
+
 }
