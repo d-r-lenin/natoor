@@ -1,0 +1,17 @@
+{
+  "name": "natoor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run compile:sass | npm run ohtml",
+    "compile:sass": "sass sass/main.scss:css/style.css -w",
+    "ohtml": "ohtml --port 3000"
+  },
+  "author": "d-r-lenin",
+  "license": "ISC",
+  "dependencies": {
+    "ohtml": "^1.0.9",
+    "sass": "^1.57.1"
+  }
+}
