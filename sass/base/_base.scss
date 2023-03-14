@@ -6,6 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    scroll-behavior: smooth;
+
 }
 
 html {
@@ -17,4 +19,6 @@ body {
     padding: 1rem;
     box-sizing: border-box;
     font-size: 1.5rem;
+    scroll-behavior: smooth;
+    
 }

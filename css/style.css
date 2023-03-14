@@ -43,6 +43,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -53,6 +54,7 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   font-size: 1.5rem;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -559,7 +561,7 @@ body {
 }
 .popup__content {
   width: 75%;
-  z-index: 21;
+  z-index: 22;
   background-color: #f7f7f7;
   display: table;
   position: relative;
@@ -598,6 +600,13 @@ body {
 .popup__close:hover, .popup__close:active {
   color: #28b485;
 }
+.popup__closer-plate {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  cursor: default;
+}
 .popup:target {
   opacity: 1;
   visibility: visible;
@@ -608,7 +617,7 @@ body {
 
 .row {
   margin: 0 auto;
-  max-width: 115rem;
+  max-width: 110rem;
 }
 .row::after {
   content: "";
@@ -717,11 +726,11 @@ body {
   display: none;
 }
 .navigation__button {
-  width: 7rem;
-  height: 7rem;
+  width: 5rem;
+  height: 5rem;
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top: 3rem;
+  right: 3rem;
   z-index: 12;
   background-color: #f7f7f7;
   border-radius: 50%;
@@ -730,11 +739,11 @@ body {
 }
 .navigation__background {
   position: fixed;
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   background-image: radial-gradient(#7ed56f, #28b485);
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 3.5rem;
+  right: 3.5rem;
   z-index: 10;
   border-radius: 50%;
   transition: all 0.3s;
@@ -794,7 +803,7 @@ body {
 }
 .navigation__icon, .navigation__icon::after, .navigation__icon::before {
   display: inline-block;
-  width: 3rem;
+  width: 2.5rem;
   height: 2px;
   background-color: #333;
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
