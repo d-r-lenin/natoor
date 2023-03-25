@@ -13,6 +13,20 @@
 html {
     // this defines what 1rem is. in this case, 1rem = 10px which is 62.5% of 16px
     font-size: 62.5%;
+
+    @include responsive(tab-land){
+        font-size: 56.25%; // 9px
+    };
+
+    @include responsive(tab-port){
+        font-size: 50%; // 8px
+    };
+    
+
+    @include responsive(big-desktop){
+        font-size: 75%; // 12px
+    };
+
 }
 
 body {
