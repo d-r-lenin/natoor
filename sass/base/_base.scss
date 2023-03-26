@@ -14,16 +14,16 @@ html {
     // this defines what 1rem is. in this case, 1rem = 10px which is 62.5% of 16px
     font-size: 62.5%;
 
-    @include responsive(tab-land){
+    @include respond(tab-land){
         font-size: 56.25%; // 9px
     };
 
-    @include responsive(tab-port){
+    @include respond(tab-port){
         font-size: 50%; // 8px
     };
     
 
-    @include responsive(big-desktop){
+    @include respond(big-desktop){
         font-size: 75%; // 12px
     };
 
@@ -34,5 +34,9 @@ body {
     box-sizing: border-box;
     font-size: 1.5rem;
     scroll-behavior: smooth;
+
+    @include respond(tab-port){
+        padding: 0;
+    }
     
 }

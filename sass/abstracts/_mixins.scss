@@ -1,7 +1,10 @@
 @mixin clearfix{
-    &::after{
+    &:before,
+    &:after {
         content: "";
         display: table;
+    }
+    &::after{
         clear: both;
     }
 }
@@ -34,7 +37,7 @@ $breakpoints:
 
 1em = 16px
 */
-@mixin responsive($breakpoint){
+@mixin respond($breakpoint){
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; //600px
     };

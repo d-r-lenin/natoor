@@ -1,6 +1,11 @@
 
 .composition{
     position: relative;
+    height: auto;
+    @include clearfix;
+    z-index: 1;
+
+    
 
     &__photo{
         width: 55%;

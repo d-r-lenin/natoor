@@ -3,6 +3,9 @@
     background-color: $color-light-1;
     margin-top: -20vh;
     padding: 25rem 0;
+    z-index: 1;
+
+    @include clearfix;
 
 }
 
@@ -13,8 +16,8 @@
         rgba($color-primary, .8), 
         rgba($color-primary-dark, .8)
     ), url(../img/nat-1.jpg);
-    margin-top: -9rem;
 
+    z-index: 0;
 
     transform: skewY(-7deg);
     & > *{ transform: skewY(7deg); }
@@ -28,13 +31,13 @@
 }
 
 .section-stroy{
-    padding: 5rem 0;
+    padding: 20rem 0;
     position: relative;
     
 }
 
 .section-booking {
-    padding: 15rem 0;
+    padding: 25rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 }
 
